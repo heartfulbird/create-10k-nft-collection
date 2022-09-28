@@ -58,8 +58,13 @@ const CHAIN = process.env.CHAIN; // rinkeby (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty
+
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
+
+// TODO: SET MANUALLY AFTER Contract deploy
+//       OR I SEE NOW I can use the result from get contract JSON after the deploy of contract
+// let CONTRACT_ADDRESS = "0x6Aa79918FAd3C2EaCC11b6Cdd8757AbF4fB7a6Fe"; // If you want to manually include it
+
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = "Unknown"; // Replace with what you want the generic titles to say.

@@ -16,7 +16,7 @@ const {
 } = require(`${basePath}/utils/functions/fetchWithRetry.js`);
 
 const {
-  CONTRACT_ADDRESS,
+  // CONTRACT_ADDRESS, // Lets use contract json response from contract deploy check
   MINT_TO_ADDRESS,
   CHAIN,
   GENERIC,
@@ -26,6 +26,10 @@ const _limit = RateLimit(1); // Currently, minting is limited to 1/second.
 const ipfsMetasFile = GENERIC
   ? `${basePath}/build/ipfsMetasGeneric/_ipfsMetas.json`
   : `${basePath}/build/ipfsMetas/_ipfsMetas.json`;
+
+const contractFile = `${basePath}/build/contract/_contract.json`;
+const contractJson = JSON.parse(fs.readFileSync(contractFile));
+const CONTRACT_ADDRESS = contractJson.contract_address;
 
 async function main() {
   const ok = await yesno({

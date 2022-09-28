@@ -26,10 +26,10 @@
     "upload_metadata": "node utils/nftport/uploadMetas",
     "deploy_contract": "node utils/nftport/deployContract",
     "get_contract": "node utils/nftport/retrieveContract",
-    "mint": "node utils/nftport/mint %npm_config_start% %npm_config_end%",
-    "reveal": "node utils/nftport/revealNFTs %npm_config_start% %npm_config_end%",
-    "check_txns": "node utils/nftport/checkTxns %npm_config_dir%",
-    "refresh_os": "node utils/functions/refreshOpensea %npm_config_start% %npm_config_end%"
+    "mint": "node utils/nftport/mint $npm_config_start $npm_config_end",
+    "reveal": "node utils/nftport/revealNFTs $npm_config_start $npm_config_end",
+    "check_txns": "node utils/nftport/checkTxns $npm_config_dir",
+    "refresh_os": "node utils/functions/refreshOpensea $npm_config_start $npm_config_end"
   },
   "author": "heartfulbird",
   "license": "MIT",
