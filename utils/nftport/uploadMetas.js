@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
@@ -75,7 +77,7 @@ async function main() {
     }
     readDir = `${basePath}/build/genericJson`;
     writeDir = `${basePath}/build/ipfsMetasGeneric`;
-    
+
     genericUploaded = true;
     main();
   }

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const FormData = require("form-data");
 const path = require("path");
 const basePath = process.cwd();

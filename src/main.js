@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 const fs = require("fs");
@@ -137,7 +139,7 @@ const addMetadata = (_dna, _edition) => {
       dna: sha1(_dna),
       edition: _edition,
       date: dateTime,
-      compiler: "HashLips Art Engine - codeSTACKr Modified",
+      compiler: "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified",
     },
     ...extraMetadata,
   };
