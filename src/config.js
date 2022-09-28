@@ -56,7 +56,7 @@ const CONTRACT_TYPE = 'erc721';
 const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 
 
-// TODO: rynkeby will be DEPRECATED 5 Oct
+// TODO: rinkeby will be DEPRECATED 5 Oct
 // 📢 The Rinkeby testnet explorer will be deprecated and set to read-only on October 5th, 2022. Please migrate your contracts and deploy new ones on Goerli or Sepolia.
 // Read more here => https://twitter.com/etherscan/status/1569311894279958531
 // NEW Alternatives:

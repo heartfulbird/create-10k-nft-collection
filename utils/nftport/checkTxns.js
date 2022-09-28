@@ -55,6 +55,10 @@ async function main() {
           console.log(`Edition #${edition}: Transaction success!`);
         } else {
           let check = await txnCheck(txUrl);
+
+          // TODO: maybe add to function (needs to be improved anyway)
+          console.log(check);
+
           if (check === "Failed") {
             failed.push(edition);
             console.log(
