@@ -54,6 +54,14 @@ const CONTRACT_NAME = 'Morning Flowers'; // Same as the namePrefix
 const CONTRACT_SYMBOL = 'MF'; // Shorter version of the Collection name
 const CONTRACT_TYPE = 'erc721';
 const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
+
+
+// TODO: rynkeby will be DEPRECATED 5 Oct
+// 📢 The Rinkeby testnet explorer will be deprecated and set to read-only on October 5th, 2022. Please migrate your contracts and deploy new ones on Goerli or Sepolia.
+// Read more here => https://twitter.com/etherscan/status/1569311894279958531
+// NEW Alternatives:
+// https://sepolia.etherscan.io/
+// https://goerli.etherscan.io/
 const CHAIN = process.env.CHAIN; // rinkeby (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
