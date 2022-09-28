@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
@@ -22,7 +24,7 @@ const deployContract = async () => {
     question: `Is all REQUIRED contract information correct in config.js? (y/n):`,
     default: null,
   });
-  
+
   if(!ok) {
     console.log("Exiting...");
     process.exit(0);

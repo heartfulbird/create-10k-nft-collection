@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const fs = require("fs");
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
@@ -47,11 +49,12 @@ const AUTH = process.env.NFT_PORT_API_KEY;
 // GROWTH PLAN => 10 is MAX
 // https://www.nftport.xyz/pricing
 const LIMIT = 3; // Your API key rate limit
+// TODO: new contract each time?
 const CONTRACT_NAME = 'Morning Flowers'; // Same as the namePrefix
 const CONTRACT_SYMBOL = 'MF'; // Shorter version of the Collection name
 const CONTRACT_TYPE = 'erc721';
-const MINT_TO_ADDRESS = '0xe32D58eC12f9811FD888f5fF8ba2Cf50E92D590E'; // MetaMask
-const CHAIN = 'rinkeby'; // rinkeby (test) or polygon (prod)
+const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
+const CHAIN = process.env.CHAIN; // rinkeby (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty

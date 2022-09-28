@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { RateLimit } = require("async-sema");
 const path = require("path");
 const basePath = process.cwd();
