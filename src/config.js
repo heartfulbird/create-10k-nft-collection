@@ -181,7 +181,7 @@ module.exports = {
   preview_gif,
   AUTH,
   LIMIT,
-  CONTRACT_ADDRESS,
+  // CONTRACT_ADDRESS,
   MINT_TO_ADDRESS,
   CHAIN,
   GENERIC,

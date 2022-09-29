@@ -1,5 +1,8 @@
 require('dotenv').config();
 
+// TODO: diff between "collection" and "product" contracts
+// https://docs.nftport.xyz/docs/nftport/ZG9jOjQ2NDA5NTU5-contract-comparison
+
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
