@@ -2,6 +2,11 @@ require('dotenv').config();
 
 // TODO: diff between "collection" and "product" contracts
 // https://docs.nftport.xyz/docs/nftport/ZG9jOjQ2NDA5NTU5-contract-comparison
+// Ownable contract
+// https://support.opensea.io/hc/en-us/articles/4403934341907-How-do-I-import-my-contract-automatically-
+// Why the collections is not editable on OpenSea:
+// 1. indexing takes up to 48 hours => https://nftport.notion.site/NFTPort-Frequently-asked-questions-5e0fb89737524766a63d443655035bae
+// 2. how to make it editable otherwise https://betterprogramming.pub/how-to-integrate-your-nft-smart-contracts-with-opensea-b2925789a62f
 
 const path = require("path");
 const basePath = process.cwd();
