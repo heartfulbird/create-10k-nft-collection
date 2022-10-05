@@ -142,7 +142,7 @@ async function reveal() {
             };
             let updateData = await fetchWithRetry(url, options);
 
-            
+
             const combinedData = {
               metaData: meta,
               updateData: updateData,
@@ -176,8 +176,13 @@ async function reveal() {
 if (START) {
   reveal();
 } else {
-  if(CHAIN === 'rinkeby') {
+  if (CHAIN === 'rinkeby') {
     console.log('Rinkeby is not supported for checking ownership of NFTs.');
+    process.exit(1);
+  }
+
+  if (CHAIN === 'goerli') {
+    console.log('Goerli is not supported for checking ownership of NFTs.');
     process.exit(1);
   }
   setInterval(checkOwnedNFTs, INTERVAL);

@@ -62,7 +62,7 @@ const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 // NEW Alternatives:
 // https://sepolia.etherscan.io/
 // https://goerli.etherscan.io/
-const CHAIN = process.env.CHAIN; // rinkeby (test) or polygon (prod)
+const CHAIN = process.env.CHAIN; // rinkeby (old test) or goerli (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty
