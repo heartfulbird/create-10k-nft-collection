@@ -1,5 +1,8 @@
 // TODO: better alternative? without pages parsing?
-//       rinkeby will be deprecated soon and anyway layout can be changed any time
+//       layout can be changed any time
+
+// ALERT about incomming connections fix:
+// https://github.com/puppeteer/puppeteer/issues/4752
 
 const puppeteer = require("puppeteer-extra");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
@@ -17,11 +20,19 @@ async function txnCheck(url) {
     const {windowId} = await session.send('Browser.getWindowForTarget');
     await session.send('Browser.setWindowBounds', {windowId, bounds: {windowState: 'minimized'}});
     await page.goto(url);
+
+    console.log('Waiting when the selector loaded to a page body...')
+
     await page.waitForSelector("#ContentPlaceHolder1_maintable");
 
     try {
       let cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(3) div:nth-child(2)", (text) => text.textContent);
       await browser.close();
+
+      console.log('Data found on a page:')
+      console.log(cardText)
+      console.log('check if it posted the data above')
+
       resolve(cardText);
     } catch (error) {
       await browser.close();
