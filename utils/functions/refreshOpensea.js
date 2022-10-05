@@ -5,7 +5,13 @@ puppeteer.use(StealthPlugin());
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 puppeteer.use(AdblockerPlugin({ blockTrackers: true }));
 let [START, END] = process.argv.slice(2);
-const { CONTRACT_ADDRESS, CHAIN } = require(`${basePath}/src/config.js`);
+
+// const { CONTRACT_ADDRESS, CHAIN } = require(`${basePath}/src/config.js`);
+const { CHAIN } = require(`${basePath}/src/config.js`);
+
+const contractFile = `${basePath}/build/contract/_contract.json`;
+const contractJson = JSON.parse(fs.readFileSync(contractFile));
+const CONTRACT_ADDRESS = contractJson.contract_address;
 
 START = parseInt(START);
 END = parseInt(END);
