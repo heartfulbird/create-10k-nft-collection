@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // TODO: better alternative? without pages parsing?
 //       layout can be changed any time
 
@@ -12,6 +14,8 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
 const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 puppeteer.use(AdblockerPlugin({ blockTrackers: true }));
+
+const CHAIN = process.env.CHAIN;
 
 async function txnCheck(url) {
   return new Promise(async (resolve, reject) => {
@@ -28,21 +32,27 @@ async function txnCheck(url) {
 
     await page.waitForSelector("#ContentPlaceHolder1_maintable");
 
+    let cardText = '';
+
+    console.log('CHAIN: CHAIN')
+
     try {
-      // stopped working
-      // let cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(3) div:nth-child(2)", (text) => text.textContent);
+      // Doesn't work for TEST
+      if (CHAIN === 'polygon') {
+        cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(3) div:nth-child(2)", (text) => text.textContent);
+      } else {
+        // Goerli
 
-      // finds "Status:Success"
-      // let cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(4)", (text) => text.textContent);
+        // finds "Status:Success"
+        // cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(4)", (text) => text.textContent);
 
-      // finds "Success"
-      let cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(4) div:nth-child(2)", (text) => text.textContent);
+        // finds "Success"
+        cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(4) div:nth-child(2)", (text) => text.textContent);
+      }
 
       await browser.close();
 
       console.log('Data found on a page:')
-      console.log(cardText)
-      console.log(cardText)
       console.log(cardText)
       console.log('check if it posted the data above')
 

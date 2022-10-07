@@ -11,14 +11,16 @@ const network = NETWORK.eth;
 //       part of LISTING https://youtu.be/Iy1n_LxUwZs?t=282
 
 // General metadata for Ethereum
-const namePrefix = "Morning Flowers";
+// TODO: config
+const namePrefix = "Morning Flowers TEST";
+// TODO: config
 const description = "A collection of morning flowers collected in a fragrant secret garden. Bring home the one that matches your mood.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 2,
+    growEditionSizeTo: 2, // TODO: config
     layersOrder: [
       { name: "background" },
       { name: "vase" },
@@ -33,8 +35,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 512, // TODO: config
+  height: 512, // TODO: config
   smoothing: false,
 };
 
@@ -48,10 +50,9 @@ const AUTH = process.env.NFT_PORT_API_KEY;
 // FREE PLAN   =>  3 is MAX
 // GROWTH PLAN => 10 is MAX
 // https://www.nftport.xyz/pricing
-const LIMIT = 3; // Your API key rate limit
-// TODO: new contract each time?
-const CONTRACT_NAME = 'Morning Flowers'; // Same as the namePrefix
-const CONTRACT_SYMBOL = 'MF'; // Shorter version of the Collection name
+const LIMIT = 3; // Your API key rate limit // TODO: config
+const CONTRACT_NAME = namePrefix; // Same as the namePrefix
+const CONTRACT_SYMBOL = 'MFT'; // Shorter version of the Collection name // TODO: config
 const CONTRACT_TYPE = 'erc721';
 const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 
@@ -64,6 +65,7 @@ const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 // https://goerli.etherscan.io/
 const CHAIN = process.env.CHAIN; // rinkeby (old test) or goerli (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
+// TODO: config
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty
 

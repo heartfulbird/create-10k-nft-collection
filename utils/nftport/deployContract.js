@@ -42,8 +42,27 @@ const deployContract = async () => {
     fs.mkdirSync(path.join(`${basePath}/build`, "contract"));
   }
 
+  // const collection_contract = false;
+  // let url = '';
+
   try {
     const url = `https://api.nftport.xyz/v0/contracts`;
+
+    // if (collection_contract === true) {
+    //   // TODO: Collections contract
+    //   //       - size fixed based on INITIAL setting (not totally limited but when contract deployed with the max_supply)
+    //   //       - PUBLIC mint date can be set
+    //   //       - PUBLIC mint date can be set
+    //   //       - Once a collection contract is deployed,
+    //   //         !!! before NFTs can be traded on marketplaces like OpenSea, they must be minted.
+    //   //       - The minting transaction fee (gas fee) is paid by the first buyer of the NFT, not the developer.
+    //   //       - NFTs in the collection are minted at time of first purchase, for a cost of mint_price
+    //   url = `https://api.nftport.xyz/v0/contracts/collections`;
+    // } else {
+    //   // TODO: Product contract (not limited size)
+    //   url = `https://api.nftport.xyz/v0/contracts`;
+    // }
+
     const contract = {
       chain: CHAIN.toLowerCase(),
       name: CONTRACT_NAME,
