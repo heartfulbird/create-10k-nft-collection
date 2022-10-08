@@ -48,9 +48,9 @@ async function txnCheck(url) {
 
       await browser.close();
 
-      console.log('Data found on a page:')
+      // console.log('Data found on a page:')
       console.log(cardText)
-      console.log('Check if Data posted above')
+      // console.log('Check if Data posted above')
 
       resolve(cardText);
     } catch (error) {

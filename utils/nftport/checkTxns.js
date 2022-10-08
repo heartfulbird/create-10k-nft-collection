@@ -58,9 +58,6 @@ async function main() {
         } else {
           let check = await txnCheck(txUrl);
 
-          console.log('Parsing result:');
-          console.log(check);
-
           if (check === "Failed") {
             failed.push(edition);
             console.log(
