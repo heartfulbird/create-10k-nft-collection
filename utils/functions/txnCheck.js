@@ -26,7 +26,7 @@ async function txnCheck(url) {
     await session.send('Browser.setWindowBounds', {windowId, bounds: {windowState: 'minimized'}});
     await page.goto(url);
 
-    console.log('CHAIN: ', CHAIN)
+    // console.log('CHAIN: ', CHAIN)
     console.log('Waiting when the selector loaded to a page body...')
 
     await page.waitForSelector("#ContentPlaceHolder1_maintable");
