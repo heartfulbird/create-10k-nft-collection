@@ -13,9 +13,9 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = process.env.NAME_PREFIX;
 const description = process.env.DESCRIPTION;
-const EDITIONS_COUNT = process.env.EDITIONS_COUNT;
-const WIDTH = process.env.WIDTH;
-const HEIGHT = process.env.HEIGHT;
+const EDITIONS_COUNT = parseInt(process.env.EDITIONS_COUNT);
+const WIDTH = parseInt(process.env.WIDTH);
+const HEIGHT = parseInt(process.env.HEIGHT);
 
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
@@ -60,7 +60,7 @@ const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 
 const CHAIN = process.env.CHAIN; // goerli (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
-const ROYALTY_SHARE = process.env.ROYALTY_SHARE; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+const ROYALTY_SHARE = parseInt(process.env.ROYALTY_SHARE); // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty
 
 // ** OPTIONAL **
