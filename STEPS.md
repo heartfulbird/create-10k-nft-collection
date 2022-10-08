@@ -8,14 +8,14 @@ build
 |-json/
 ```
 ### Upload Files
-`npm run upload_files`
+`npm run upload_files --start=1 --end=2`
 
 Result:
 - uploads images to IPFS
 - in `json/*` => "file_url" updated with ipfs url
 
 ### Upload Metas
-`npm run upload_metadata`
+`npm run upload_metadata --start=1 --end=2`
 
 Result:
 - uploaded json files to IPFS
@@ -33,7 +33,7 @@ build
 `npm run get_contract`
 
 ### Mint
-`npm run mint --start=1 --end=10`
+`npm run mint --start=1 --end=2`
 
 ### CheckTransactions
 `npm run check_txns --dir=minted`
