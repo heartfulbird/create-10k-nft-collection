@@ -14,6 +14,14 @@ const _limit = RateLimit(LIMIT);
 const allMetadata = [];
 const regex = new RegExp("^([0-9]+).png");
 
+let [START, END] = process.argv.slice(2);
+START = parseInt(START) || null;
+END = parseInt(END) || null;
+
+if (!(START && END)) {
+  throw 'Define START - END (Example: npm run upload_files --start=2 --end=2)'
+}
+
 async function main() {
   console.log("Starting upload of images...");
   const files = fs.readdirSync(`${basePath}/build/images`);
@@ -24,6 +32,19 @@ async function main() {
     try {
       if (regex.test(file)) {
         const fileName = path.parse(file).name;
+
+        if (START && fileName) {
+          if (fileName < START) {
+            continue;
+          }
+        }
+
+        if (END && fileName) {
+          if (fileName > END) {
+            continue;
+          }
+        }
+
         let jsonFile = fs.readFileSync(`${basePath}/build/json/${fileName}.json`);
         let metaData = JSON.parse(jsonFile);
 

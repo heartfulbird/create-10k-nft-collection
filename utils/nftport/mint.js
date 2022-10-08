@@ -16,7 +16,6 @@ const {
 } = require(`${basePath}/utils/functions/fetchWithRetry.js`);
 
 const {
-  // CONTRACT_ADDRESS, // Lets use contract json response from contract deploy check
   MINT_TO_ADDRESS,
   CHAIN,
   GENERIC,

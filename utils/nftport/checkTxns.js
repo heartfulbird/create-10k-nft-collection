@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
@@ -56,7 +58,7 @@ async function main() {
         } else {
           let check = await txnCheck(txUrl);
 
-          // TODO: maybe add to function (needs to be improved anyway)
+          console.log('Parsing result:');
           console.log(check);
 
           if (check === "Failed") {

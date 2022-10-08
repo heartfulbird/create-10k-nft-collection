@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
@@ -176,8 +178,8 @@ async function reveal() {
 if (START) {
   reveal();
 } else {
-  if (CHAIN === 'rinkeby') {
-    console.log('Rinkeby is not supported for checking ownership of NFTs.');
+  if (CHAIN === 'goerli') {
+    console.log('Goerli is not supported for checking ownership of NFTs.');
     process.exit(1);
   }
 

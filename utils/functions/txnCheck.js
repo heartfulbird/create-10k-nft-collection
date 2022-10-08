@@ -1,12 +1,10 @@
 require('dotenv').config();
 
-// TODO: better alternative? without pages parsing?
-//       layout can be changed any time
-
-// ALERT about incomming connections fix:
+// FIX of "ALERT about incoming connection":
 // https://github.com/puppeteer/puppeteer/issues/4752
-// Maybe you dont need the Certificate and anyway it requires login or admin pass and my own pass doesn't work even ifI'm an Admin...
-// try:
+// NOTE:
+// Maybe you don't need the Certificate and anyway it requires "login" or "admin" pass and session owner pass didn't work even if it is Admin...
+// try simplified version WITHOUT Certificate:
 // sudo codesign --force --sign - ./node_modules/puppeteer/.local-chromium/mac-961656/chrome-mac/Chromium.app --deep
 
 const puppeteer = require("puppeteer-extra");
@@ -28,33 +26,31 @@ async function txnCheck(url) {
     await session.send('Browser.setWindowBounds', {windowId, bounds: {windowState: 'minimized'}});
     await page.goto(url);
 
+    console.log('CHAIN: ', CHAIN)
     console.log('Waiting when the selector loaded to a page body...')
 
     await page.waitForSelector("#ContentPlaceHolder1_maintable");
 
     let cardText = '';
 
-    console.log('CHAIN: CHAIN')
-
     try {
-      // Doesn't work for TEST
       if (CHAIN === 'polygon') {
         cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(3) div:nth-child(2)", (text) => text.textContent);
-      } else {
-        // Goerli
-
+      } else if (CHAIN === 'goerli') {
         // finds "Status:Success"
         // cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(4)", (text) => text.textContent);
 
         // finds "Success"
         cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(4) div:nth-child(2)", (text) => text.textContent);
+      } else {
+        console.log("Unknown CHAIN!");
       }
 
       await browser.close();
 
       console.log('Data found on a page:')
       console.log(cardText)
-      console.log('check if it posted the data above')
+      console.log('Check if Data posted above')
 
       resolve(cardText);
     } catch (error) {

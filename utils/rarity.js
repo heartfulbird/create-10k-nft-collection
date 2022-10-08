@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const fs = require("fs");
 const layersDir = `${basePath}/layers`;

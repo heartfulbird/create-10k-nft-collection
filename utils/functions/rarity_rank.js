@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const fs = require("fs");
 
@@ -50,7 +52,7 @@ const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
     } else {
       console.log("Invalid choice. Enter either 1 or 2.");
     }
-    
+
     // close readline
     rl.close();
   } catch (e) {

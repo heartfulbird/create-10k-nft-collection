@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const fetch = require("node-fetch");
 const { AUTH } = require(`${basePath}/src/config.js`);

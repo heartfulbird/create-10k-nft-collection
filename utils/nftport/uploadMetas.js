@@ -13,6 +13,14 @@ const _limit = RateLimit(LIMIT);
 const regex = new RegExp("^([0-9]+).json$");
 let genericUploaded = false;
 
+let [START, END] = process.argv.slice(2);
+START = parseInt(START) || null;
+END = parseInt(END) || null;
+
+if (!(START && END)) {
+  throw 'Define START - END (Example: npm run upload_metadata --start=2 --end=2)'
+}
+
 if (!fs.existsSync(path.join(`${basePath}/build`, "/ipfsMetas"))) {
   fs.mkdirSync(path.join(`${basePath}/build`, "ipfsMetas"));
 }
@@ -31,6 +39,21 @@ async function main() {
     if (regex.test(file)) {
       let jsonFile = fs.readFileSync(`${readDir}/${file}`);
       let metaData = JSON.parse(jsonFile);
+
+      let edition = metaData.custom_fields.edition
+
+      if (START && edition) {
+        if (edition < START) {
+          continue;
+        }
+      }
+
+      if (END && edition) {
+        if (edition > END) {
+          continue;
+        }
+      }
+
       const uploadedMeta = `${writeDir}/${metaData.custom_fields.edition}.json`;
 
       try {

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const puppeteer = require("puppeteer-extra");
 const StealthPlugin = require("puppeteer-extra-plugin-stealth");
@@ -6,9 +8,7 @@ const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 puppeteer.use(AdblockerPlugin({ blockTrackers: true }));
 let [START, END] = process.argv.slice(2);
 
-// const { CONTRACT_ADDRESS, CHAIN } = require(`${basePath}/src/config.js`);
 const { CHAIN } = require(`${basePath}/src/config.js`);
-
 const contractFile = `${basePath}/build/contract/_contract.json`;
 const contractJson = JSON.parse(fs.readFileSync(contractFile));
 const CONTRACT_ADDRESS = contractJson.contract_address;
@@ -23,10 +23,9 @@ if (!START || !END) {
 }
 
 const COLLECTION_BASE_URL =
-  // CHAIN.toLowerCase() === "rinkeby"
-  CHAIN.toLowerCase() === "goerli" // TODO: though, not sure that for TEST it will work the same way as it worked for rinkeby
-    ? `https://testnets.opensea.io/assets`
-    : "https://opensea.io/assets/matic"; // TODO: this btw for Polygon so if done on ETH it will not work I guess
+  CHAIN.toLowerCase() === "goerli"
+    ? `https://testnets.opensea.io/assets/goerli`
+    : "https://opensea.io/assets/matic";
 
 async function main() {
   const notFound = [];

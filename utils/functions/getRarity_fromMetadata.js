@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const fs = require("fs");
 
@@ -11,7 +13,7 @@ const getRarity = () => {
 
 function processRarity(nfts) {
   const rarity = {}
-  
+
   // loop through all nfts
   for(const nft of nfts) {
     // check if attributes exist
@@ -50,7 +52,7 @@ function processRarity(nfts) {
 
   // sort nfts by total rarity score
   nfts.sort((a, b) => b.total_rarity_score - a.total_rarity_score)
-  
+
   // add rank to nfts
   nfts.map((nft, index) => {
     nft.rank = index + 1

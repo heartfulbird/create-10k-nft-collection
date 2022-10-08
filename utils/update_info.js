@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const basePath = process.cwd();
 const fs = require("fs");
 const yesno = require('yesno');
@@ -21,7 +23,7 @@ data.forEach((item) => {
   if(updateName) item.name = `${namePrefix} #${item.edition}`;
   if(updateDescription) item.description = description;
   if(updateBaseUri) item.image = `${baseUri}/${item.edition}.png`;
- 
+
   fs.writeFileSync(
     `${basePath}/build/json/${item.edition}.json`,
     JSON.stringify(item, null, 2)

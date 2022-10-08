@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");

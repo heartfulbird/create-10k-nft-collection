@@ -11,16 +11,18 @@ const network = NETWORK.eth;
 //       part of LISTING https://youtu.be/Iy1n_LxUwZs?t=282
 
 // General metadata for Ethereum
-// TODO: config
-const namePrefix = "Morning Flowers TEST";
-// TODO: config
-const description = "A collection of morning flowers collected in a fragrant secret garden. Bring home the one that matches your mood.";
+const namePrefix = process.env.NAME_PREFIX;
+const description = process.env.DESCRIPTION;
+const EDITIONS_COUNT = process.env.EDITIONS_COUNT;
+const WIDTH = process.env.WIDTH;
+const HEIGHT = process.env.HEIGHT;
+
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 2, // TODO: config
+    growEditionSizeTo: EDITIONS_COUNT,
     layersOrder: [
       { name: "background" },
       { name: "vase" },
@@ -35,8 +37,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512, // TODO: config
-  height: 512, // TODO: config
+  width: WIDTH,
+  height: HEIGHT,
   smoothing: false,
 };
 
@@ -50,31 +52,18 @@ const AUTH = process.env.NFT_PORT_API_KEY;
 // FREE PLAN   =>  3 is MAX
 // GROWTH PLAN => 10 is MAX
 // https://www.nftport.xyz/pricing
-const LIMIT = 3; // Your API key rate limit // TODO: config
+const LIMIT = process.env.RATE_LIMIT; // Your API key rate limit
 const CONTRACT_NAME = namePrefix; // Same as the namePrefix
-const CONTRACT_SYMBOL = 'MFT'; // Shorter version of the Collection name // TODO: config
+const CONTRACT_SYMBOL = process.env.CONTRACT_SYMBOL; // Shorter version of the Collection name
 const CONTRACT_TYPE = 'erc721';
 const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 
-
-// TODO: rinkeby will be DEPRECATED 5 Oct
-// 📢 The Rinkeby testnet explorer will be deprecated and set to read-only on October 5th, 2022. Please migrate your contracts and deploy new ones on Goerli or Sepolia.
-// Read more here => https://twitter.com/etherscan/status/1569311894279958531
-// NEW Alternatives:
-// https://sepolia.etherscan.io/
-// https://goerli.etherscan.io/
-const CHAIN = process.env.CHAIN; // rinkeby (old test) or goerli (test) or polygon (prod)
+const CHAIN = process.env.CHAIN; // goerli (test) or polygon (prod)
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
-// TODO: config
-const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+const ROYALTY_SHARE = process.env.ROYALTY_SHARE; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty
 
 // ** OPTIONAL **
-
-// TODO: SET MANUALLY AFTER Contract deploy
-//       OR I SEE NOW I can use the result from get contract JSON after the deploy of contract
-// let CONTRACT_ADDRESS = "0x6Aa79918FAd3C2EaCC11b6Cdd8757AbF4fB7a6Fe"; // If you want to manually include it
-
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = "Unknown"; // Replace with what you want the generic titles to say.
@@ -183,7 +172,6 @@ module.exports = {
   preview_gif,
   AUTH,
   LIMIT,
-  // CONTRACT_ADDRESS,
   MINT_TO_ADDRESS,
   CHAIN,
   GENERIC,
