@@ -21,10 +21,8 @@ const layerConfigurations = [
   {
     growEditionSizeTo: EDITIONS_COUNT,
     layersOrder: [
-      { name: "background" },
-      { name: "vase" },
-      { name: "basic flowers" },
-      { name: "anemone" },
+      { name: "ape" },
+      { name: "glasses" },
     ],
   },
 ];

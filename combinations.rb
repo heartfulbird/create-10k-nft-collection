@@ -22,13 +22,21 @@
 #   glasses 2
 #   hat 15
 #   suit 13
+# TOTAL: 21840
+# categories = {
+#   ape: 4,
+#   bg: 14,
+#   glasses: 2,
+#   hat: 15,
+#   suit: 13
+# } # 21840
+
+
+# TESTS:
 categories = {
   ape: 4,
-  bg: 14,
   glasses: 2,
-  hat: 15,
-  suit: 13
-}
+} # 8
 
 $combinations = []
 $combination = []
