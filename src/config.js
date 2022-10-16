@@ -21,6 +21,14 @@ const layerConfigurations = [
   {
     growEditionSizeTo: EDITIONS_COUNT,
     layersOrder: [
+      // bg: 14,
+      // suit: 13
+      // ape: 4,
+      // glasses: 3, # with "none"
+      // hat: 16, # with "none"
+      { name: "background" },
+      { name: "hat" },
+      { name: "suit" },
       { name: "ape" },
       { name: "glasses" },
     ],
