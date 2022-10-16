@@ -7,9 +7,6 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 
 const network = NETWORK.eth;
 
-// TODO: WHERE IS THE PRICE?
-//       part of LISTING https://youtu.be/Iy1n_LxUwZs?t=282
-
 // General metadata for Ethereum
 const namePrefix = process.env.NAME_PREFIX;
 const description = process.env.DESCRIPTION;
