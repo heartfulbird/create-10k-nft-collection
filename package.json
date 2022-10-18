@@ -21,7 +21,7 @@
     "get_contract": "node utils/nftport/retrieveContract",
     "mint": "node utils/nftport/mint $npm_config_start $npm_config_end",
     "reveal": "node utils/nftport/revealNFTs $npm_config_start $npm_config_end",
-    "check_txns": "node utils/nftport/checkTxns $npm_config_dir",
+    "check_txns": "node utils/nftport/checkTxns $npm_config_dir $npm_config_start $npm_config_end",
     "rarity": "node utils/rarity",
     "rarity_md": "node utils/functions/getRarity_fromMetadata",
     "rarity_rank": "node utils/functions/rarity_rank.js",
@@ -29,7 +29,9 @@
     "pixelate": "node utils/pixelate.js",
     "update_info": "node utils/update_info.js",
     "preview_gif": "node utils/preview_gif.js",
-    "refresh_os": "node utils/functions/refreshOpensea $npm_config_start $npm_config_end"
+    "refresh_os": "node utils/functions/refreshOpensea $npm_config_start $npm_config_end",
+    "add_metas": "node utils/functions/addMetas.js $npm_config_start $npm_config_end",
+    "build_metas": "node utils/functions/buildMetas.js"
   },
   "author": "heartfulbird",
   "license": "MIT",

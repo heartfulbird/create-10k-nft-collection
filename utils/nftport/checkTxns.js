@@ -6,7 +6,15 @@ const fs = require("fs");
 const { txnCheck } = require(`${basePath}/utils/functions/txnCheck.js`);
 const regex = new RegExp("^([0-9]+).json$");
 
-let [dir] = process.argv.slice(2);
+let [dir, START, END] = process.argv.slice(2);
+
+START = parseInt(START) || null;
+END = parseInt(END) || null;
+
+if (!(START && END)) {
+  throw 'Define START - END (Example: npm run check_txns --dir=minted --start=1 --end=2)'
+}
+
 const acceptedDirectories = ["minted", "revealed"];
 if (!acceptedDirectories.includes(dir)) {
   console.log(
@@ -30,6 +38,19 @@ async function main() {
     try {
       if (regex.test(file)) {
         const edition = path.parse(file).name;
+
+        if (START && edition) {
+          if (edition < START) {
+            continue;
+          }
+        }
+
+        if (END && edition) {
+          if (edition > END) {
+            continue;
+          }
+        }
+
         let jsonFile = fs.readFileSync(
           `${basePath}/build/${dir}/${edition}.json`
         );

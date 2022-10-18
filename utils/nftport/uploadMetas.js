@@ -1,3 +1,8 @@
+// EXPECTED TO BE USED WITH BATCHES - it EXTENDS build/ipfsMetas/_ipfsMetas.json
+// USAGE:
+// npm run upload_metadata --start=1 --end=2
+// npm run upload_metadata --start=3 --end=4
+
 require('dotenv').config();
 
 const path = require("path");
@@ -30,7 +35,19 @@ let writeDir = `${basePath}/build/ipfsMetas`;
 
 async function main() {
   console.log(`Starting upload of ${GENERIC ? genericUploaded ? 'generic ' : '' : ''}metadata...`);
-  const allMetadata = [];
+
+  // TODO: change it so it LOADS META IF EXISTS and adds new to the end of file (or even checks if such data isn't there already)
+  let allMetadata = [];
+
+  const meta_path = `${writeDir}/_ipfsMetas.json`;
+  // TODO: it pre-loads existing data from _meta to EXTEND it with the new batch
+  //       EXPECTED TO WORK WITH BATCHES ONLY THIS WAY
+  //       (if BATCH was done successfully it will be ADDED TO EXISTING _meta no matter if data already exists)
+  if (fs.existsSync(meta_path)) {
+    let metaJsonFile = fs.readFileSync(meta_path);
+    allMetadata = JSON.parse(metaJsonFile);
+  }
+
   const files = fs.readdirSync(readDir);
   files.sort(function (a, b) {
     return a.split(".")[0] - b.split(".")[0];

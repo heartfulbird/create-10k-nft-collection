@@ -8,6 +8,9 @@ build
 |-json/
 ```
 ### Upload Files
+
+_NOTE: with START - END it EXTENDS METAS with CURRENT BATCH data_
+
 `npm run upload_files --start=1 --end=2`
 
 Result:
@@ -15,10 +18,13 @@ Result:
 - in `json/*` => "file_url" updated with ipfs url
 
 ### Upload Metas
+
+_NOTE: with START - END it EXTENDS METAS with CURRENT BATCH data_
+
 `npm run upload_metadata --start=1 --end=2`
 
 Result:
-- uploaded json files to IPFS
+- uploads json files to IPFS
 - creates `jsonMetas` with all the info ready to mint (ipfs to images and json files added)
 ```
 build
