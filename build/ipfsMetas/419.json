@@ -1,0 +1,47 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreihwbusujv73ru6d7legmbfjvyvzllr5yyqrruele4imbgzvl22kki",
+  "name": "Funky Brothers #419",
+  "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+  "file_url": "https://ipfs.io/ipfs/bafybeiekkgwjfcunu56suek2rlqwixbfb4uh4zdqpwokfnpmmkadt7lbxu",
+  "external_url": null,
+  "animation_url": null,
+  "custom_fields": {
+    "dna": "67a8c37cbef496f91402d377da3fced8e9169145",
+    "edition": 419,
+    "date": 1665935179303,
+    "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+  },
+  "attributes": [
+    {
+      "trait_type": "background",
+      "value": "sea dog",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "hat",
+      "value": "orange game over",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "suit",
+      "value": "yellow",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "ape",
+      "value": "buddy",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "glasses",
+      "value": "golden",
+      "max_value": null,
+      "display_type": null
+    }
+  ]
+}

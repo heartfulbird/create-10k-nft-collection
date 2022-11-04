@@ -1,0 +1,59 @@
+{
+  "metaData": {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreihvm5ojg5updixypf4sm7jvnczyubparwwvdadp4jedmaqqus4k64",
+    "name": "Funky Brothers #71",
+    "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+    "file_url": "https://ipfs.io/ipfs/bafybeigccfff5tlsng7ejt37fzkiqproagp5htxk4vguxm3mgkbsmkpvgy",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "dna": "0ab9cf26cd29155a9f62e7d34c9b463d0c598a4d",
+      "edition": 71,
+      "date": 1665934627774,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    },
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "dreamy",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "hat",
+        "value": "yellow",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "suit",
+        "value": "light green",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "ape",
+        "value": "buddy",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "glasses",
+        "value": "round",
+        "max_value": null,
+        "display_type": null
+      }
+    ]
+  },
+  "mintData": {
+    "response": "OK",
+    "chain": "polygon",
+    "contract_address": "0x844e78fFC63447087C5d7cdE41fDdF4b54f6b2D7",
+    "transaction_hash": "0x0bec64f57bc4e792e387b78a7a92b57abb3302ccfe995c842b6c136f96272d79",
+    "transaction_external_url": "https://polygonscan.com/tx/0x0bec64f57bc4e792e387b78a7a92b57abb3302ccfe995c842b6c136f96272d79",
+    "metadata_uri": "ipfs://bafkreihvm5ojg5updixypf4sm7jvnczyubparwwvdadp4jedmaqqus4k64",
+    "mint_to_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798",
+    "transaction_verified": true
+  }
+}

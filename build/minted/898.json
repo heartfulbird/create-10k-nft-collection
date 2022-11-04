@@ -1,0 +1,59 @@
+{
+  "metaData": {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreihxxxicviyhb67pabpgdigeaudd3vp46ryepbi2c7hpogv6d7x3ou",
+    "name": "Funky Brothers #898",
+    "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+    "file_url": "https://ipfs.io/ipfs/bafybeif2hjagn7ruo43xczlxw4p2mcwp2mbttpy7ufplmxu33lw3r44ljm",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "dna": "c7d2fba674784b96a734854458230f454e33e708",
+      "edition": 898,
+      "date": 1665935935501,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    },
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "green",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "hat",
+        "value": "orange cap",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "suit",
+        "value": "orange gangster",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "ape",
+        "value": "buddy",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "glasses",
+        "value": "round",
+        "max_value": null,
+        "display_type": null
+      }
+    ]
+  },
+  "mintData": {
+    "response": "OK",
+    "chain": "polygon",
+    "contract_address": "0x844e78fFC63447087C5d7cdE41fDdF4b54f6b2D7",
+    "transaction_hash": "0xb9a040901cbec89af10a8e0f1fad68fa5004d51da7344c5e78dc99939d8050fd",
+    "transaction_external_url": "https://polygonscan.com/tx/0xb9a040901cbec89af10a8e0f1fad68fa5004d51da7344c5e78dc99939d8050fd",
+    "metadata_uri": "ipfs://bafkreihxxxicviyhb67pabpgdigeaudd3vp46ryepbi2c7hpogv6d7x3ou",
+    "mint_to_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798",
+    "transaction_verified": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "metaData": {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreihzcxu6ovsd7llfmi5jdg2um3mhxuiijhcxbjcsazd73tqmembbca",
+    "name": "Funky Brothers #32",
+    "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+    "file_url": "https://ipfs.io/ipfs/bafybeiecbz5m3umzkr6aqi332npv5fxoef5j2zurdlvy5ijmzo2xdh3hgu",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "dna": "28f8305f793125f4de7dec23be4c672b0070c183",
+      "edition": 32,
+      "date": 1665934565190,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    },
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "banana",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "hat",
+        "value": "none",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "suit",
+        "value": "dark captain suit",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "ape",
+        "value": "buddy",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "glasses",
+        "value": "round",
+        "max_value": null,
+        "display_type": null
+      }
+    ]
+  },
+  "mintData": {
+    "response": "OK",
+    "chain": "polygon",
+    "contract_address": "0x844e78fFC63447087C5d7cdE41fDdF4b54f6b2D7",
+    "transaction_hash": "0x883eb8f72cf99aa46f743f4215b59bec31df8483e3e0040c9a6a625b2d23a4f2",
+    "transaction_external_url": "https://polygonscan.com/tx/0x883eb8f72cf99aa46f743f4215b59bec31df8483e3e0040c9a6a625b2d23a4f2",
+    "metadata_uri": "ipfs://bafkreihzcxu6ovsd7llfmi5jdg2um3mhxuiijhcxbjcsazd73tqmembbca",
+    "mint_to_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798",
+    "transaction_verified": true
+  }
+}

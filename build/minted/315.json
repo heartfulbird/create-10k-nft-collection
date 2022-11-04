@@ -1,0 +1,59 @@
+{
+  "metaData": {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreihxq4d6esbohkeubwljfq4nfs5qkc4og5i52mnwh53l62cuc46jme",
+    "name": "Funky Brothers #315",
+    "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+    "file_url": "https://ipfs.io/ipfs/bafybeifvurzgj7jivhnabdudgmluoshls5ymnl2vqldpwbrmfns7gxypum",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "dna": "6613bbbe621be256f01316d290e4017515f7d71f",
+      "edition": 315,
+      "date": 1665935012737,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    },
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "gummy",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "hat",
+        "value": "none",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "suit",
+        "value": "gray gangster",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "ape",
+        "value": "old chap",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "glasses",
+        "value": "none",
+        "max_value": null,
+        "display_type": null
+      }
+    ]
+  },
+  "mintData": {
+    "response": "OK",
+    "chain": "polygon",
+    "contract_address": "0x844e78fFC63447087C5d7cdE41fDdF4b54f6b2D7",
+    "transaction_hash": "0xc74f1769ab327a50b87b1f8f539137ed53ea229c1b7878ac06da7767e94436c8",
+    "transaction_external_url": "https://polygonscan.com/tx/0xc74f1769ab327a50b87b1f8f539137ed53ea229c1b7878ac06da7767e94436c8",
+    "metadata_uri": "ipfs://bafkreihxq4d6esbohkeubwljfq4nfs5qkc4og5i52mnwh53l62cuc46jme",
+    "mint_to_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798",
+    "transaction_verified": true
+  }
+}

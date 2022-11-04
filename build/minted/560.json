@@ -1,0 +1,59 @@
+{
+  "metaData": {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreia72wctrxqefwrdsdjftcy4oq5oq7dum6v7gfe56t2m6keu3ydqfu",
+    "name": "Funky Brothers #560",
+    "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+    "file_url": "https://ipfs.io/ipfs/bafybeifv2rvjmobnif3rr2rtgcecjrh37d6qlgp64yap63neb7kekizdxe",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "dna": "475e21923a3612f2cb54f09143cca1217f9dc4e4",
+      "edition": 560,
+      "date": 1665935402319,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    },
+    "attributes": [
+      {
+        "trait_type": "background",
+        "value": "blue",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "hat",
+        "value": "orange cap",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "suit",
+        "value": "dark blue green",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "ape",
+        "value": "funny",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "glasses",
+        "value": "none",
+        "max_value": null,
+        "display_type": null
+      }
+    ]
+  },
+  "mintData": {
+    "response": "OK",
+    "chain": "polygon",
+    "contract_address": "0x844e78fFC63447087C5d7cdE41fDdF4b54f6b2D7",
+    "transaction_hash": "0x699013a584f5a54bc61eedd4cbad0c3b5750892bd6ec6de6dc55c7b1583b75f9",
+    "transaction_external_url": "https://polygonscan.com/tx/0x699013a584f5a54bc61eedd4cbad0c3b5750892bd6ec6de6dc55c7b1583b75f9",
+    "metadata_uri": "ipfs://bafkreia72wctrxqefwrdsdjftcy4oq5oq7dum6v7gfe56t2m6keu3ydqfu",
+    "mint_to_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798",
+    "transaction_verified": true
+  }
+}

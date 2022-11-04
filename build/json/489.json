@@ -1,0 +1,34 @@
+{
+  "name": "Funky Brothers #489",
+  "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
+  "file_url": "https://ipfs.io/ipfs/bafybeihbirx6bp6ahm7dohrdh4xuvmbvylbminaxbrhdmaw56ozjhifhuq",
+  "image": "https://ipfs.io/ipfs/bafybeihbirx6bp6ahm7dohrdh4xuvmbvylbminaxbrhdmaw56ozjhifhuq",
+  "attributes": [
+    {
+      "trait_type": "background",
+      "value": "fruity"
+    },
+    {
+      "trait_type": "hat",
+      "value": "orange game over"
+    },
+    {
+      "trait_type": "suit",
+      "value": "light blue"
+    },
+    {
+      "trait_type": "ape",
+      "value": "funny"
+    },
+    {
+      "trait_type": "glasses",
+      "value": "golden"
+    }
+  ],
+  "custom_fields": {
+    "dna": "3e04892875aa6e15f7655f77d8add2cc3708c936",
+    "edition": 489,
+    "date": 1665935287708,
+    "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+  }
+}
