@@ -24,16 +24,17 @@ async function txnCheck(url) {
     const session = await page.target().createCDPSession();
     const {windowId} = await session.send('Browser.getWindowForTarget');
     await session.send('Browser.setWindowBounds', {windowId, bounds: {windowState: 'minimized'}});
-    await page.goto(url);
-
-    // console.log('CHAIN: ', CHAIN)
-    console.log('Waiting when the selector loaded to a page body...')
-
-    await page.waitForSelector("#ContentPlaceHolder1_maintable");
-
-    let cardText = '';
 
     try {
+      await page.goto(url);
+
+      // console.log('CHAIN: ', CHAIN)
+      console.log('Waiting when the selector loaded to a page body...')
+
+      await page.waitForSelector("#ContentPlaceHolder1_maintable");
+
+      let cardText = '';
+
       if (CHAIN === 'polygon') {
         cardText = await page.$eval("#ContentPlaceHolder1_maintable .row:nth-child(3) div:nth-child(2)", (text) => text.textContent);
       } else if (CHAIN === 'goerli') {
@@ -61,3 +62,14 @@ async function txnCheck(url) {
 }
 
 module.exports = { txnCheck };
+
+// TODO:
+// Edition #1000: Transaction success!
+//   All transactions checked.
+//   Unknown Txn Count: 31
+// Unknown Txns:
+// 225,226,227,228,229,230,
+// 235,236,237,238,239,240,
+// 625,626,627,628,629,630,
+// 820,821,822,823,824,825,826,827,828,829,830,831,832
+// There are some unknown transaction statuses'.
