@@ -1,7 +1,8 @@
 ### TODO: 
 #### for all 101 artists check it can generate image
+#### for FIXED Collections (Smoothies/Pizzas) - add ARG to get N artist (based on editions counter) from array and stop whenever all DONE 
 
-### Themes
+### Ideas for collections
 #### - Smoothie
 #### - Pizza
 
