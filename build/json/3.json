@@ -1,34 +1,26 @@
 {
-  "name": "Funky Brothers #3",
-  "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
-  "file_url": "https://ipfs.io/ipfs/bafybeih7iglnhk6yfkdzxbqfskb7csjyhkuxmghyjo26ywylvov5fbq3um",
-  "image": "https://ipfs.io/ipfs/bafybeih7iglnhk6yfkdzxbqfskb7csjyhkuxmghyjo26ywylvov5fbq3um",
+  "name": "Lovely Smoothie #3",
+  "description": "Smoothie in the style of WASSILY KANDINSKY",
+  "file_url": "https://ipfs.io/ipfs/bafkreiaxawp7swboov2rwp3lvtilvhc5wuvvpew45uf232isn6dcgdnz64",
+  "image": "https://ipfs.io/ipfs/bafkreiaxawp7swboov2rwp3lvtilvhc5wuvvpew45uf232isn6dcgdnz64",
   "attributes": [
     {
-      "trait_type": "background",
-      "value": "sunrise"
+      "trait_type": "title",
+      "value": "Smoothie"
     },
     {
-      "trait_type": "hat",
-      "value": "light pink"
+      "trait_type": "date",
+      "value": "11/16/2022"
     },
     {
-      "trait_type": "suit",
-      "value": "yellow"
-    },
-    {
-      "trait_type": "ape",
-      "value": "funny"
-    },
-    {
-      "trait_type": "glasses",
-      "value": "golden"
+      "trait_type": "artist",
+      "value": "WASSILY KANDINSKY"
     }
   ],
   "custom_fields": {
-    "dna": "77a7e7642f19345e08e792de57a053a6d3d9ca5a",
-    "edition": 3,
-    "date": 1665934518448,
+    "dna": "0f70f21928120e34514f204ef40a589dcd4f94ee",
+    "edition": "3",
+    "date": 1668569725402,
     "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
   }
 }

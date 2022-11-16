@@ -5,6 +5,8 @@ const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
 
+const {run_next_command} = require(`${basePath}/utils/functions/child_processes.js`);
+
 const { RateLimit } = require('async-sema');
 const { fetchWithRetry } = require(`${basePath}/utils/functions/fetchWithRetry.js`);
 
@@ -32,6 +34,8 @@ if (!(START && END)) {
 }
 
 async function main() {
+  let fileName = '';
+
   console.log("Starting upload of images...");
   const files = fs.readdirSync(`${basePath}/build/images`);
   files.sort(function(a, b){
@@ -40,7 +44,7 @@ async function main() {
   for (const file of files) {
     try {
       if (regex.test(file)) {
-        const fileName = path.parse(file).name;
+        fileName = path.parse(file).name;
 
         if (START && fileName) {
           if (fileName < START) {
@@ -110,6 +114,11 @@ async function main() {
           console.log(`${fileName} already uploaded.`);
         }
 
+        // TODO:
+        // This replaces dat in json BUT this way we also update _metadata one more time here
+        // so to support on by one handling we need to REPLACE old with new json data in _metadata
+        allMetadata = allMetadata.filter(hh => hh.name !== metaData.name)
+
         allMetadata.push(metaData);
       }
     } catch (error) {
@@ -121,6 +130,12 @@ async function main() {
     `${basePath}/build/json/_metadata.json`,
     JSON.stringify(allMetadata, null, 2)
   );
+
+  next_command(fileName);
+}
+
+function next_command(edition) {
+  run_next_command(`npm run upload_metadata --start=${edition} --end=${edition}`);
 }
 
 main();

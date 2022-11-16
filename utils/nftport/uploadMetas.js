@@ -9,6 +9,8 @@ const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
 
+const {run_next_command} = require(`${basePath}/utils/functions/child_processes.js`);
+
 const { RateLimit } = require("async-sema");
 const { fetchWithRetry } = require(`${basePath}/utils/functions/fetchWithRetry.js`);
 
@@ -35,6 +37,7 @@ let writeDir = `${basePath}/build/ipfsMetas`;
 
 async function main() {
   console.log(`Starting upload of ${GENERIC ? genericUploaded ? 'generic ' : '' : ''}metadata...`);
+  let edition = null;
 
   // TODO: change it so it LOADS META IF EXISTS and adds new to the end of file (or even checks if such data isn't there already)
   let allMetadata = [];
@@ -57,7 +60,7 @@ async function main() {
       let jsonFile = fs.readFileSync(`${readDir}/${file}`);
       let metaData = JSON.parse(jsonFile);
 
-      let edition = metaData.custom_fields.edition
+      edition = metaData.custom_fields.edition
 
       if (START && edition) {
         if (edition < START) {
@@ -108,6 +111,8 @@ async function main() {
       `${writeDir}/_ipfsMetas.json`,
       JSON.stringify(allMetadata, null, 2)
     );
+
+    next_command(edition);
   }
 
   // Upload Generic Metadata if GENERIC is true
@@ -121,6 +126,10 @@ async function main() {
     genericUploaded = true;
     main();
   }
+}
+
+function next_command(edition) {
+  run_next_command(`npm run mint --start=${edition} --end=${edition} --confirmation=0`);
 }
 
 main();

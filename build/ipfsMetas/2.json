@@ -1,45 +1,33 @@
 {
   "response": "OK",
-  "metadata_uri": "ipfs://bafkreidgfhsgjwuipaam3klchjfzqlayvlhnkf76r2sjb3tiavt3da2ilq",
-  "name": "Funky Brothers #2",
-  "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
-  "file_url": "https://ipfs.io/ipfs/bafybeiakzcj4n2tjj54ruc64wkfjr4hsrp34k6itg2pywhqitx5uriiidy",
+  "metadata_uri": "ipfs://bafkreieajre2jceejcjlbf5ljriq5ijilnsjvt7ezyjk2l3igjfppouflm",
+  "name": "Lovely Smoothie #2",
+  "description": "Smoothie in the style of Vincent van Gogh",
+  "file_url": "https://ipfs.io/ipfs/bafkreidckopfv6jb5wohboi3x35ve33mo2c6y2w7uofwcn22azigetknne",
   "external_url": null,
   "animation_url": null,
   "custom_fields": {
-    "dna": "568c6a230faa0a7df4991a4a7ba24f10964a381d",
-    "edition": 2,
-    "date": 1665934516692,
+    "dna": "1f7ad1857e5f8fbb35eff9edc6da438f49727368",
+    "edition": "2",
+    "date": 1667841217174,
     "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
   },
   "attributes": [
     {
-      "trait_type": "background",
-      "value": "fruity",
+      "trait_type": "title",
+      "value": "Smoothie",
       "max_value": null,
       "display_type": null
     },
     {
-      "trait_type": "hat",
-      "value": "brown cap",
+      "trait_type": "date",
+      "value": "11/8/2022",
       "max_value": null,
       "display_type": null
     },
     {
-      "trait_type": "suit",
-      "value": "orange gangster",
-      "max_value": null,
-      "display_type": null
-    },
-    {
-      "trait_type": "ape",
-      "value": "old chap",
-      "max_value": null,
-      "display_type": null
-    },
-    {
-      "trait_type": "glasses",
-      "value": "round",
+      "trait_type": "artist",
+      "value": "Vincent van Gogh",
       "max_value": null,
       "display_type": null
     }

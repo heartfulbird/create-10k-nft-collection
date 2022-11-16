@@ -1,45 +1,33 @@
 {
   "response": "OK",
-  "metadata_uri": "ipfs://bafkreihs747yuldxjpovpb6j2nwmnx5czhjyadhijdb6ayu4z3pmrswqhi",
-  "name": "Funky Brothers #1",
-  "description": "Funky Brothers is a collection of stylish monkey-brothers-pirates starting an exciting new adventure. Treasures hunting awakens extraordinary excitement and a frantic desire to take possession of them... But what awaits them ahead and how it will end? The collection consists of unique and funky characters from funny cute lazybones to violent and most formidable pirates! Hurry up and choose your hero to join this bright and unforgettable journey!",
-  "file_url": "https://ipfs.io/ipfs/bafybeieh2bwc4rni23zk73kyl4lbwtem7ibjws252i6qngzm6egas5bwzu",
+  "metadata_uri": "ipfs://bafkreifjwfbxy2rdbv435z2wkuru6mesntoesnyvmynwkuwhf5gwrk65mq",
+  "name": "Lovely Smoothie #1",
+  "description": "Smoothie in the style of Pablo Picasso",
+  "file_url": "https://ipfs.io/ipfs/bafkreigmguv3vbcjaga4jbotaq2lfhd5jquv3cd5jklny3vqxc36nkvy2q",
   "external_url": null,
   "animation_url": null,
   "custom_fields": {
-    "dna": "7a5faa3343fffb1208c0ccdc3196e1652bfaa26f",
-    "edition": 1,
-    "date": 1665934514907,
+    "dna": "27ac4521ec0d64092e1350b2eda02da36b9576e7",
+    "edition": "1",
+    "date": 1667841045008,
     "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
   },
   "attributes": [
     {
-      "trait_type": "background",
-      "value": "gummy",
+      "trait_type": "title",
+      "value": "Smoothie",
       "max_value": null,
       "display_type": null
     },
     {
-      "trait_type": "hat",
-      "value": "red glitch",
+      "trait_type": "date",
+      "value": "11/8/2022",
       "max_value": null,
       "display_type": null
     },
     {
-      "trait_type": "suit",
-      "value": "dark blue green",
-      "max_value": null,
-      "display_type": null
-    },
-    {
-      "trait_type": "ape",
-      "value": "funny",
-      "max_value": null,
-      "display_type": null
-    },
-    {
-      "trait_type": "glasses",
-      "value": "round",
+      "trait_type": "artist",
+      "value": "Pablo Picasso",
       "max_value": null,
       "display_type": null
     }

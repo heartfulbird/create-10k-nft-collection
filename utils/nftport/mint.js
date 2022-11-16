@@ -4,9 +4,16 @@ const { RateLimit } = require("async-sema");
 const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
-let [START, END] = process.argv.slice(2);
+
+console.log(process.argv)
+
+let [START, END, CONFIRMATION] = process.argv.slice(2);
+
 START = parseInt(START);
 END = parseInt(END);
+CONFIRMATION = parseInt(CONFIRMATION);
+CONFIRMATION = CONFIRMATION !== 0
+
 let range = START ? END ? `${START}-${END}` : `${START}-Remaining` : "ALL";
 const yesno = require('yesno');
 
@@ -31,14 +38,16 @@ const contractJson = JSON.parse(fs.readFileSync(contractFile));
 const CONTRACT_ADDRESS = contractJson.contract_address;
 
 async function main() {
-  const ok = await yesno({
-    question: `OK to mint ${range}? (y/n):`,
-    default: null,
-  });
+  if (CONFIRMATION === true) {
+    const ok = await yesno({
+      question: `OK to mint ${range}? (y/n):`,
+      default: null,
+    });
 
-  if(!ok) {
-    console.log("Exiting...");
-    process.exit(0);
+    if(!ok) {
+      console.log("Exiting...");
+      process.exit(0);
+    }
   }
 
   if (!fs.existsSync(path.join(`${basePath}/build`, "/minted"))) {
