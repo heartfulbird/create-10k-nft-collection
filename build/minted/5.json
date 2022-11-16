@@ -1,0 +1,46 @@
+{
+  "metaData": {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreicfts2x227jidpw222y4of3dp6acsg2ld4omifveqfmaig4q4dsui",
+    "name": "Lovely Smoothie #5",
+    "description": "Smoothie in the style of VINCENT VAN GOGH",
+    "file_url": "https://ipfs.io/ipfs/bafkreid2k7lrg3isiaxw5ozpubkzxjnfobuylhkqnjelqhk3bzwqo3troa",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "dna": "2811cd7a535361c86910c0c806499c0826c7e254",
+      "edition": "5",
+      "date": 1668583372474,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    },
+    "attributes": [
+      {
+        "trait_type": "title",
+        "value": "Smoothie",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "date",
+        "value": "11/16/2022",
+        "max_value": null,
+        "display_type": null
+      },
+      {
+        "trait_type": "artist",
+        "value": "VINCENT VAN GOGH",
+        "max_value": null,
+        "display_type": null
+      }
+    ]
+  },
+  "mintData": {
+    "response": "OK",
+    "chain": "goerli",
+    "contract_address": "0x5D9235978f660374FD27D01111dcF0F8171FFd77",
+    "transaction_hash": "0xac4043478498c5a2d416087992fa83cae3e36265cad07b40d37d8ca0a31c5ba8",
+    "transaction_external_url": "https://goerli.etherscan.io/tx/0xac4043478498c5a2d416087992fa83cae3e36265cad07b40d37d8ca0a31c5ba8",
+    "metadata_uri": "ipfs://bafkreicfts2x227jidpw222y4of3dp6acsg2ld4omifveqfmaig4q4dsui",
+    "mint_to_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Lovely Smoothie #5",
+  "description": "Smoothie in the style of VINCENT VAN GOGH",
+  "file_url": "https://ipfs.io/ipfs/bafkreid2k7lrg3isiaxw5ozpubkzxjnfobuylhkqnjelqhk3bzwqo3troa",
+  "image": "https://ipfs.io/ipfs/bafkreid2k7lrg3isiaxw5ozpubkzxjnfobuylhkqnjelqhk3bzwqo3troa",
+  "attributes": [
+    {
+      "trait_type": "title",
+      "value": "Smoothie"
+    },
+    {
+      "trait_type": "date",
+      "value": "11/16/2022"
+    },
+    {
+      "trait_type": "artist",
+      "value": "VINCENT VAN GOGH"
+    }
+  ],
+  "custom_fields": {
+    "dna": "2811cd7a535361c86910c0c806499c0826c7e254",
+    "edition": "5",
+    "date": 1668583372474,
+    "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+  }
+}
