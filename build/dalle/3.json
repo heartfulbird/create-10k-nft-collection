@@ -21,7 +21,6 @@
       "Accept": "application/json, text/plain, */*",
       "Content-Type": "application/json",
       "User-Agent": "OpenAI/NodeJS/3.1.0",
-      "Authorization": "Bearer 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",
       "Content-Length": 78
     },
     "method": "post",

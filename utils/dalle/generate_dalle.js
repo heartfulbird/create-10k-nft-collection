@@ -169,7 +169,7 @@ async function main(title , date) {
 
     fs.writeFileSync(
       `${basePath}/build/dalle/${edition}.json`,
-      JSON.stringify({ status, config, data }, null, 2)
+      JSON.stringify({ status, data }, null, 2)
     );
 
 
