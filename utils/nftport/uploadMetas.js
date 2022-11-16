@@ -82,7 +82,13 @@ async function main() {
         if (uploadedMetaFile.length > 0) {
           const ipfsMeta = JSON.parse(uploadedMetaFile);
           if (ipfsMeta.response !== "OK") throw "metadata not uploaded";
+
+          // TODO:
+          // This replaces data in *.json BUT here we also update ALL _metadata any time the script called with same args
+          // so to support on by one handling we need to REPLACE old with new json data in _metadata
+          allMetadata = allMetadata.filter(hh => hh.name !== metaData.name)
           allMetadata.push(ipfsMeta);
+
           console.log(`${metaData.name} metadata already uploaded`);
         } else {
           throw "metadata not uploaded";
@@ -99,7 +105,13 @@ async function main() {
             body: jsonFile,
           };
           const response = await fetchWithRetry(url, options);
+
+          // TODO:
+          // This replaces data in *.json BUT here we also update ALL _metadata any time the script called with same args
+          // so to support on by one handling we need to REPLACE old with new json data in _metadata
+          allMetadata = allMetadata.filter(hh => hh.name !== metaData.name)
           allMetadata.push(response);
+
           fs.writeFileSync(uploadedMeta, JSON.stringify(response, null, 2));
           console.log(`${response.name} metadata uploaded!`);
         } catch (err) {
@@ -111,8 +123,6 @@ async function main() {
       `${writeDir}/_ipfsMetas.json`,
       JSON.stringify(allMetadata, null, 2)
     );
-
-    next_command(edition);
   }
 
   // Upload Generic Metadata if GENERIC is true
@@ -126,6 +136,8 @@ async function main() {
     genericUploaded = true;
     main();
   }
+
+  next_command(edition); // TODO: uses the LAST edition so only for usage 1 by 1 it is OK
 }
 
 function next_command(edition) {

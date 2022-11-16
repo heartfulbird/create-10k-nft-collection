@@ -115,7 +115,7 @@ async function main() {
         }
 
         // TODO:
-        // This replaces dat in json BUT this way we also update _metadata one more time here
+        // This replaces data in *.json BUT here we also update ALL _metadata any time the script called with same args
         // so to support on by one handling we need to REPLACE old with new json data in _metadata
         allMetadata = allMetadata.filter(hh => hh.name !== metaData.name)
 

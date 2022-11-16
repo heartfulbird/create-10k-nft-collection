@@ -5,8 +5,6 @@ const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
 
-console.log(process.argv)
-
 let [START, END, CONFIRMATION] = process.argv.slice(2);
 
 START = parseInt(START);

@@ -76,5 +76,31 @@
       "date": 1668569725402,
       "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
     }
+  },
+  {
+    "name": "Lovely Smoothie #4",
+    "description": "Smoothie in the style of JOSEPH-MALLORD WILLIAM TURNER",
+    "file_url": "https://ipfs.io/ipfs/bafkreih7tgrzb3g6j5h55fl3y5qpkxakm4y6x4mhhannsozxe4xdszmwv4",
+    "image": "https://ipfs.io/ipfs/bafkreih7tgrzb3g6j5h55fl3y5qpkxakm4y6x4mhhannsozxe4xdszmwv4",
+    "attributes": [
+      {
+        "trait_type": "title",
+        "value": "Smoothie"
+      },
+      {
+        "trait_type": "date",
+        "value": "11/16/2022"
+      },
+      {
+        "trait_type": "artist",
+        "value": "JOSEPH-MALLORD WILLIAM TURNER"
+      }
+    ],
+    "custom_fields": {
+      "dna": "b3b31607df326793f941ec37ec2c09e0df6b169b",
+      "edition": "4",
+      "date": 1668580738170,
+      "compiler": "HashLips Art Engine - codeSTACKr Modified - heartfulbird modified"
+    }
   }
 ]

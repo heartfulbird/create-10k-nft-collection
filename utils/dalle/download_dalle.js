@@ -165,7 +165,7 @@ async function main() {
   ensure_dir('json');
 
   const { edition, url, title, description, artist, date } = get_edition_and_attributes();
-  console.log(edition, url, title, description, artist, date)
+  // console.log(edition, url, title, description, artist, date)
 
   const targetFile = `${basePath}/build/images/${edition}.png`
 
