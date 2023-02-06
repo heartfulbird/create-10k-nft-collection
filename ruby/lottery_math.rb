@@ -101,6 +101,8 @@ class LotteryMath
     original_total + 1
   end
 
+  # TODO: IT NEVER PICKS MOST RARE AUTOMATICALLY!
+  # REAL (TUNNED) ALGO
   def pick
     category = PROPORTION.max_by { |weight| rand ** (1.0 / weight) }
 
@@ -108,7 +110,7 @@ class LotteryMath
     new_count = categories[category] + 1
 
     # TODO for MOST RARE => REVEAL MANUALLY
-    # (anyway chances are that all super rares will be revealed NOT too early)
+    # (cause anyway all super rares will be revealed NOT too early likely - or NEVERMIND)
     max_reached_in_category = new_count > UNREVEALED[category]
     most_rare = (category == most_rare_category)
 
@@ -119,7 +121,6 @@ class LotteryMath
     # - reveal JUST 1 MOST RARE NFT manually running the script with item ID
     # - start the auto script again or run standard versions manually
 
-    # TODO: IT NEVER PICKS MOST RARE AUTOMATICALLY!
     if max_reached_in_category || most_rare
       category_found = false
       categories_without_most_rare.each do |new_category|
@@ -148,7 +149,8 @@ class LotteryMath
     category
   end
 
-  def totals # imitation based on REAL fine-tunned algo
+  # IMITATION for all UNREVEALED runs based on REAL fine-tunned algo
+  def totals
     unrevealed_total.times.each_with_object({}) do |_, obj|
       category = pick # REAL
 
