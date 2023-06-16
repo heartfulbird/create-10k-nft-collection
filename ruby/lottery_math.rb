@@ -65,6 +65,22 @@ class LotteryMath
     10_000 => 5000
   } # Total: 5556
 
+  # ALL = {
+  #   1 => 1,
+  #   10 => 10,
+  #   100 => 100,
+  #   1000 => 1000,
+  #   10_000 => 10_000
+  # } # Total: 11_111
+
+  LEVELS = {
+    1 => 1,
+    10 => 2,
+    100 => 3,
+    1000 => 4,
+    10_000 => 5
+  }
+
   def initialize
 
   end
@@ -103,7 +119,56 @@ class LotteryMath
 
   # TODO: IT NEVER PICKS MOST RARE AUTOMATICALLY!
   # REAL (TUNNED) ALGO
-  def pick
+  # def pick
+  #   category = PROPORTION.max_by { |weight| rand ** (1.0 / weight) }
+  #
+  #   categories[category] ||= 0
+  #   new_count = categories[category] + 1
+  #
+  #   # TODO for MOST RARE => REVEAL MANUALLY
+  #   # (cause anyway all super rares will be revealed NOT too early likely - or NEVERMIND)
+  #   max_reached_in_category = new_count > UNREVEALED[category]
+  #   most_rare = (category == most_rare_category)
+  #
+  #   # TODO: TO REVEAL MOST RARE:
+  #   # - stop auto reveal script
+  #   # - check manually if there are NFT's ready to REVEAL
+  #   # - pick ONLY 1 id
+  #   # - reveal JUST 1 MOST RARE NFT manually running the script with item ID
+  #   # - start the auto script again or run standard versions manually
+  #
+  #   if max_reached_in_category || most_rare
+  #     category_found = false
+  #     categories_without_most_rare.each do |new_category|
+  #       categories[new_category] ||= 0
+  #       new_count = categories[new_category] + 1
+  #
+  #       if new_count <= UNREVEALED[new_category]
+  #         category = new_category
+  #         category_found = true
+  #         break
+  #       end
+  #     end
+  #
+  #     # if MOST RARE NOT REVEALED BUT WE ARE ON A LAST STEP
+  #     unless category_found
+  #       warning = 'CANT REVEAL MOST RARE NFT AS A LAST ITEM IN THE COLLECTION!'
+  #       puts warning
+  #
+  #       return nil
+  #     end
+  #   end
+  #
+  #   categories[category] += 1
+  #   save_categories
+  #
+  #   category
+  # end
+
+  # Including All levels
+  def pick(id)
+    puts id
+
     category = PROPORTION.max_by { |weight| rand ** (1.0 / weight) }
 
     categories[category] ||= 0
@@ -111,23 +176,15 @@ class LotteryMath
 
     # TODO for MOST RARE => REVEAL MANUALLY
     # (cause anyway all super rares will be revealed NOT too early likely - or NEVERMIND)
-    max_reached_in_category = new_count > UNREVEALED[category]
-    most_rare = (category == most_rare_category)
+    max_reached_in_category = new_count > category
 
-    # TODO: TO REVEAL MOST RARE:
-    # - stop auto reveal script
-    # - check manually if there are NFT's ready to REVEAL
-    # - pick ONLY 1 id
-    # - reveal JUST 1 MOST RARE NFT manually running the script with item ID
-    # - start the auto script again or run standard versions manually
-
-    if max_reached_in_category || most_rare
+    if max_reached_in_category
       category_found = false
-      categories_without_most_rare.each do |new_category|
+      all_categories.each do |new_category|
         categories[new_category] ||= 0
         new_count = categories[new_category] + 1
 
-        if new_count <= UNREVEALED[new_category]
+        if new_count <= new_category
           category = new_category
           category_found = true
           break
@@ -136,7 +193,7 @@ class LotteryMath
 
       # if MOST RARE NOT REVEALED BUT WE ARE ON A LAST STEP
       unless category_found
-        warning = 'CANT REVEAL MOST RARE NFT AS A LAST ITEM IN THE COLLECTION!'
+        warning = 'SMTH WENT WRONG'
         puts warning
 
         return nil
@@ -144,21 +201,59 @@ class LotteryMath
     end
 
     categories[category] += 1
-    save_categories
+    # TODO: here we build final result { id: category_id }
+    # categories_hash[id] = category
+    categories_hash[id] = LEVELS[category]
 
     category
   end
 
   # IMITATION for all UNREVEALED runs based on REAL fine-tunned algo
+  # def totals
+  #   unrevealed_total.times.each_with_object({}) do |_, obj|
+  #     category = pick # REAL
+  #
+  #     next unless category # can be nil because we skip auto assign of the MOST RARE as a LAST ITEM IN COLLECTION
+  #
+  #     obj[category] ||= 0
+  #     obj[category] += 1
+  #   end.sort_by { |k, _v| k }.to_h
+  # end
+
+  # For ALL 11_111 WITH Most Rare
   def totals
-    unrevealed_total.times.each_with_object({}) do |_, obj|
-      category = pick # REAL
+    numbers = total.times.each_with_object({}) do |id, obj|
+      category = pick(id + 1) # REAL
 
       next unless category # can be nil because we skip auto assign of the MOST RARE as a LAST ITEM IN COLLECTION
 
       obj[category] ||= 0
       obj[category] += 1
     end.sort_by { |k, _v| k }.to_h
+
+    puts categories_hash
+    puts 'count of appearance for every level (separated counting in a loop)'
+    puts numbers
+
+    # debug hash
+    grouped = categories_hash.group_by { |k, v| v }
+    sorted = grouped.sort_by { |k, _v| k }.to_h
+    sorted = sorted.each_with_object({}) { |(k, v), obj| obj[k] = v.map { |vv| vv[0] } }
+
+    puts 'levels - keys of final hash { id: level, ... } grouped by levels'
+    puts sorted.keys
+
+    puts 'count of ids assigned per each level'
+    sorted.map { |k, v| puts "#{k}: #{v.size}" } # map just doesn't pollute console
+
+    puts "id of 1 Level - CHECK it is not always 11111 cause it is so rare that the script can pick it only on a last step"
+    puts sorted[1]
+
+    pretty = JSON.pretty_generate(categories_hash)
+    # ORIGINAL moved to tmp/random_levels_source/
+    File.open('tmp/random_levels.json', 'w') { |file| file.write(pretty) }
+
+    [categories_hash, sorted]
   end
 
   def totals_pretty
@@ -220,7 +315,26 @@ class LotteryMath
     # save to file and read in categories
   end
 
+  def categories_hash
+    @categories_hash ||= {}
+  end
+
   def categories_without_most_rare
     PROPORTION.sort.reverse.tap { |p| p.pop }
   end
+
+  def all_categories
+    PROPORTION.sort.reverse
+  end
 end
+
+# TODO: RUN
+# require_relative './ruby/lottery_math.rb'
+# hash, sorted = LotteryMath.new.totals
+
+# This prepares hash with format:
+# {
+#   id: category_id, # OR replace with LEVELS[category]
+#   id: category_id, # OR replace with LEVELS[category]
+#   ...
+# }
