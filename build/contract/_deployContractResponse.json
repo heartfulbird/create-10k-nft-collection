@@ -1,0 +1,10 @@
+{
+  "response": "OK",
+  "chain": "goerli",
+  "transaction_hash": "0xc358163112e3116b9a193e5a7827847c5f3f4f0dcbabce02dfc1c54dcbefb228",
+  "transaction_external_url": "https://goerli.etherscan.io/tx/0xc358163112e3116b9a193e5a7827847c5f3f4f0dcbabce02dfc1c54dcbefb228",
+  "owner_address": "0xf001b0b4667C5e6ACe05cb548d01e69485530798",
+  "type": "erc721",
+  "name": "Test Rebels",
+  "symbol": "TR"
+}

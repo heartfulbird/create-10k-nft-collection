@@ -26,21 +26,18 @@ Result:
 Result:
 - creates `ipfsMetas` with all the info ready to mint (ipfs to images and json files added)
 
-[//]: # (### Deploy Contract <-- Env dependent things start here)
+### Deploy Contract <-- Env dependent things start here
 
-[//]: # (`npm run deploy_contract`)
+`npm run deploy_contract`
 
-[//]: # ()
-[//]: # (### Get Contract)
+### Get Contract
 
-[//]: # (`npm run get_contract`)
+`npm run get_contract`
 
-[//]: # ()
-[//]: # (### Mint)
+### Mint
 
-[//]: # (`npm run mint --start=1 --end=2`)
+`npm run mint --start=1 --end=2`
 
-[//]: # ()
-[//]: # (### CheckTransactions)
+### CheckTransactions
 
-[//]: # (`npm run check_txns --dir=minted`)
+`npm run check_hidden_txns --dir=minted --start=1 --end=2`
