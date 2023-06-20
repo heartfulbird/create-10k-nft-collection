@@ -3,6 +3,9 @@ require('dotenv').config();
 const basePath = process.cwd();
 const fetch = require("node-fetch");
 const { AUTH } = require(`${basePath}/src/config.js`);
+const { LIMIT, GENERIC } = require(`${basePath}/src/config.js`);
+const {RateLimit} = require("async-sema");
+const _limit = RateLimit(LIMIT);
 
 function fetchNoRetry(url, options) {
   return new Promise((resolve, reject) => {

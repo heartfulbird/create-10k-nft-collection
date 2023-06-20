@@ -26,11 +26,11 @@ const layerConfigurations = [
       // ape: 4,
       // glasses: 3, # with "none"
       // hat: 16, # with "none"
-      { name: "background" },
-      { name: "hat" },
-      { name: "suit" },
-      { name: "ape" },
-      { name: "glasses" },
+      // { name: "background" },
+      // { name: "hat" },
+      // { name: "suit" },
+      // { name: "ape" },
+      { name: "unknown" },
     ],
   },
 ];
@@ -62,20 +62,23 @@ const CONTRACT_TYPE = 'erc721';
 const MINT_TO_ADDRESS = process.env.WALLET_ADDRESS; // MetaMask
 
 const CHAIN = process.env.CHAIN; // goerli (test) or polygon (prod)
-const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
+const METADATA_UPDATABLE = process.env.METADATA_UPDATABLE; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = parseInt(process.env.ROYALTY_SHARE); // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = MINT_TO_ADDRESS; // Address that will receive the royalty
 
 // ** OPTIONAL **
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
-const GENERIC_TITLE = "Unknown"; // Replace with what you want the generic titles to say.
-const GENERIC_DESCRIPTION = "Unknown"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = [
-  // "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
-]; // Replace with your generic image(s). If multiple, separate with a comma.
-const REVEAL_PROMPT = true; // Set to false if you want to disable the prompt to confirm each reveal.
-const INTERVAL = 900000; // Milliseconds. This is the interval for it to check for sales and reveal the NFT. 900000 = 15 minutes.
+const GENERIC = process.env.GENERIC; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC_TITLE = process.env.GENERIC_TITLE; // Replace with what you want the generic titles to say.
+const GENERIC_DESCRIPTION = process.env.GENERIC_DESCRIPTION; // Replace with what you want the generic descriptions to say.
+// Array of generic images if you need different
+// const GENERIC_IMAGE = [
+//   // "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
+// ]; // Replace with your generic image(s). If multiple, separate with a comma.
+const GENERIC_IMAGE = process.env.GENERIC_IMAGE // 'define in config after uploading'; IFPS format: "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
+
+const REVEAL_PROMPT = process.env.REVEAL_PROMPT; // Set to false if you want to disable the prompt to confirm each reveal.
+const INTERVAL = process.env.INTERVAL; // Milliseconds. This is the interval for it to check for sales and reveal the NFT. 900000 = 15 minutes.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {

@@ -21,7 +21,12 @@ let data = JSON.parse(rawdata);
 console.log("Starting generic metadata creation.");
 
 for (let item of data) {
-  const genericImage = GENERIC_IMAGE[Math.floor(Math.random() * GENERIC_IMAGE.length)];
+  // if random generic from array
+  // const genericImage = GENERIC_IMAGE[Math.floor(Math.random() * GENERIC_IMAGE.length)];
+
+  // if SAME image
+  const genericImage = GENERIC_IMAGE;
+
   item.name = `${GENERIC_TITLE} #${item.custom_fields.edition}`;
   item.description = GENERIC_DESCRIPTION;
   item.file_url = genericImage;

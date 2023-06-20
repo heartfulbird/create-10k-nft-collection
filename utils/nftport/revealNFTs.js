@@ -48,7 +48,8 @@ async function checkOwnedNFTs() {
       ownedNFTsData = await fetchWithRetry(`${url}${page}`, options);
       for (const ownedNFT of ownedNFTsData.nfts) {
         if (ownedNFT.contract_address === CONTRACT_ADDRESS) {
-          ownedNFTs.push(parseInt(ownedNFT.token_id));
+          // TODO filter revealed here or later
+          ownedNFTs.push(parseInt(ownedNFT.token_id)); // TODO: just id - we can fetch from hash this way or get file with id name
         }
       }
     }
@@ -79,7 +80,10 @@ async function reveal() {
         continue;
       }
     }
+
+    // TODO: dont loop metas just get file by
     if (!ownedNFTs.includes(edition)) {
+      // TODO: skip revealed here or later
       const revealedFilePath = `${basePath}/build/revealed/${edition}.json`;
       try {
         fs.accessSync(revealedFilePath);
