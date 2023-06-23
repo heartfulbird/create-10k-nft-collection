@@ -1,0 +1,11 @@
+{
+  "image": "ipfs://QmYrzV5gQZxUjDVRgLmwA75eZJ5KeoDpuaKf5TkEUNVmLZ",
+  "attributes": [
+    {"trait_type":"Hat","value":"Beanie"},
+    {"trait_type":"Fur","value":"Black"},
+    {"trait_type":"Background","value":"Orange"},
+    {"trait_type":"Clothes","value":"Striped Tee"},
+    {"trait_type":"Mouth","value":"Small Grin"},
+    {"trait_type":"Eyes","value":"Closed"}
+  ]
+}

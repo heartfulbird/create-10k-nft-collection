@@ -36,7 +36,7 @@ Result:
 
 ### Mint
 
-`npm run mint --start=1 --end=2`
+`npm run mint_hidden --start=1 --end=2`
 
 ### CheckTransactions
 
