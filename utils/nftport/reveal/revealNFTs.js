@@ -30,6 +30,7 @@ const fs = require("fs");
 const yesno = require('yesno');
 const { RateLimit } = require("async-sema");
 const { fetchWithRetry, } = require(`${basePath}/utils/functions/fetchWithRetry.js`);
+const fetch = require("node-fetch");
 const { txnCheck } = require(`${basePath}/utils/functions/txnCheck.js`);
 const {
   MINT_TO_ADDRESS,
@@ -47,6 +48,8 @@ const _limit = RateLimit(LIMIT);
 let [START, END] = process.argv.slice(2);
 START = parseInt(START);
 END = parseInt(END);
+
+const DISCORD_REVEALED_HOOK = process.env.DISCORD_REVEALED_HOOK;
 
 // visible in both checkOwnedNFTs and reveal
 let ownedNFTs = [];
@@ -206,6 +209,7 @@ async function reveal() {
 
               fs.writeFileSync(revealedFilePath,JSON.stringify(revealedFileJson, null, 2));
               console.log(`${meta.name} (edition: ${edition}) already revealed.`);
+              notifyDiscord({ edition: edition, msg: 'confirmed' })
             } else if (check.includes("Fail")) {
               // TODO: CHECK 5)
               //       check REQUEST failed
@@ -286,6 +290,7 @@ async function reveal() {
               JSON.stringify(combinedData, null, 2)
               );
             console.log(`Updated transaction created for ${meta.name} (edition: ${edition})`);
+            notifyDiscord({ edition: edition, msg: 'tx created' })
           } catch (err) {
             console.log(err);
           }
@@ -305,6 +310,51 @@ async function reveal() {
     );
   }
   console.log("(To check IF errors, run command: npm run check_txns --dir=revealed)");
+
+  // test
+  // notifyDiscord({ edition: 0, msg: 'test' })
+}
+
+// test
+// notifyDiscord({ edition: 0, msg: 'test' })
+async function notifyDiscord(args) {
+  console.log('NOTIFY DISCORD');
+
+  const content = `${args['edition']} | ${args['msg']} | ${CONTRACT_ADDRESS}`
+
+  let params = {
+    username: "Reveal Notifications",
+    avatar_url: "",
+    content: content,
+    // embeds: [
+    //   {
+    //     "title": "Some title",
+    //     "color": 15258703,
+    //     "thumbnail": {
+    //       "url": "",
+    //     },
+    //     "fields": [
+    //       {
+    //         "name": "Your fields here",
+    //         "value": "Whatever you wish to send",
+    //         "inline": true
+    //       }
+    //     ]
+    //   }
+    // ]
+  }
+
+
+  fetch(DISCORD_REVEALED_HOOK, {
+    method: "POST",
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(params)
+  }).then(res => {
+    // console.log(res);
+    return true;
+  })
 }
 
 // TODO: MANUAL => if START set it will check only what you want ONCE
