@@ -1,0 +1,9 @@
+{
+  "uid": "reveal",
+  "append": true,
+  "watch": false,
+  "script": "./utils/nftport/reveal/revealNFTs.js",
+  "logFile": "./logs/forever.log",
+  "outFile": "./logs/out.log",
+  "errFile": "./logs/error.log"
+}

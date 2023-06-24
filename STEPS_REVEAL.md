@@ -9,17 +9,53 @@ AUTO
 - if not set it will repeat with interval
 - `npm run reveal_custom`
 
-
-
 Result:
 - reveals nad save info to build/revealed/*.json
 
-### CheckTransactions (can run manual check but it happens in reveal process as well)
-`npm run check_revealed_txns --dir=revealed --start=1 --end=2`
+
+### RUN IN THE BACKGROUND
+
+forever
+
+https://blog.logrocket.com/running-node-js-scripts-continuously-forever/
+
+Should be installed through package.json
+
+otherwise
+
+`npm install forever`
+
+Prepare logs files:
+
+`npm run forever_prepare`
+
+Start
+
+`npm run forever_start`
+
+Stop
+
+`npm run forever_stop`
+
+List
+
+`npm run forever_list`
+
+Check logs:
+
+`tail -f ~/.forever/logs/forever.log`
 
 
-## Important _IDEALLY_ to use 1 service to reveal or SYNC files on all services (local/remote)
+### _Ideally_ use 1 service to reveal 
+or SYNC files on all services (local/remote)
+
 to track revealed files
 otherwise it can try to reveal (update meta) again
 which should not break but creates redundant requests
 with big collection it is even more important
+
+
+### CheckTransactions
+_can run manual check but it happens in reveal process as well_
+
+`npm run check_revealed_txns --dir=revealed --start=1 --end=2`

@@ -1,13 +1,21 @@
-// RUN:
-// TODO: MANUAL => if START set it will check only what you want ONCE
-//       AUTO   => if not set it will repeat with interval
-// TODO: SYNC revealed/* local/remote
-//       OR USE SINGLE service to reveal
+// TODO: SYNC revealed/* files on local AND remote envs
+
+// DETAILS:
+//   MANUAL (ONCE)
+//    => if START passed it will check only what you want ONCE and reveal no matter if you owner or not
+//   REPEATABLE
+//    => if START not passed it will repeat with interval and reveal ONLY if not owner
+
+// MANUAL RUN
 // npm run reveal_custom --start=1 --end=2
 
-// RUN IN THE BACKGROUND
-// forever
-// https://blog.logrocket.com/running-node-js-scripts-continuously-forever/
+// REPEATABLE RUN
+// npm run reveal_custom
+
+// BACKGROUND RUN
+// (npm run forever_prepare)
+// npm run forever_start
+// tail -f ~/.forever/logs/forever.log
 
 // NOTIFICATIONS
 // Discord
@@ -304,7 +312,7 @@ async function reveal() {
 if (START) {
   reveal();
 } else {
-  // TODO: what if works?
+  // TODO: it works, but had to add toLowerCase() to compare contract addresses - not sure if same possible in prod but now should work
   // if (CHAIN === 'goerli') {
   //   console.log('Goerli is not supported for checking ownership of NFTs.');
   //   process.exit(1);
