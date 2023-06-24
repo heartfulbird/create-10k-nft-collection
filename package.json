@@ -16,23 +16,18 @@
     "generate": "node index.js",
     "create_generic": "node utils/nftport/genericMetas",
     "upload_files": "node utils/nftport/uploadFiles $npm_config_start $npm_config_end",
-
     "upload_hidden_file": "node utils/nftport/hidden/uploadFile",
     "upload_hidden_meta": "node utils/nftport/hidden/uploadMeta",
     "generate_hidden_meta": "node utils/nftport/hidden/generateMeta $npm_config_count",
     "mint_hidden": "node utils/nftport/hidden/mint $npm_config_start $npm_config_end",
     "check_hidden_txns": "node utils/nftport/hidden/checkTxns $npm_config_dir $npm_config_start $npm_config_end",
-
     "upload_real_file": "node utils/nftport/real/uploadFile",
     "upload_real_meta": "node utils/nftport/real/uploadMeta",
     "generate_real_meta": "node utils/nftport/real/generateMeta $npm_config_count",
     "mint_real": "node utils/nftport/real/mint $npm_config_start $npm_config_end",
     "check_real_txns": "node utils/nftport/real/checkTxns $npm_config_dir $npm_config_start $npm_config_end",
-
-
     "reveal_custom": "node utils/nftport/reveal/revealNFTs $npm_config_start $npm_config_end",
     "check_revealed_txns": "node utils/nftport/reveal/checkTxns $npm_config_dir $npm_config_start $npm_config_end",
-
     "upload_metadata": "node utils/nftport/uploadMetas $npm_config_start $npm_config_end",
     "deploy_contract": "node utils/nftport/deployContract",
     "get_contract": "node utils/nftport/retrieveContract",
