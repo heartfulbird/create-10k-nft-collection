@@ -1,0 +1,28 @@
+[
+  {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreihjd7yubl4t2due4itq4ejrf52mnnq5efxvwqg6mdbjisbwb6hocu",
+    "name": "Generic Rebels",
+    "description": "Generic Rebels description",
+    "file_url": "https://ipfs.io/ipfs/bafkreif6fbkugambn26pgq5wwimmxabh53ilv7rywt4yvqs2xzw3ljw7fm",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "edition": 1
+    },
+    "attributes": null
+  },
+  {
+    "response": "OK",
+    "metadata_uri": "ipfs://bafkreihjd7yubl4t2due4itq4ejrf52mnnq5efxvwqg6mdbjisbwb6hocu",
+    "name": "Generic Rebels",
+    "description": "Generic Rebels description",
+    "file_url": "https://ipfs.io/ipfs/bafkreif6fbkugambn26pgq5wwimmxabh53ilv7rywt4yvqs2xzw3ljw7fm",
+    "external_url": null,
+    "animation_url": null,
+    "custom_fields": {
+      "edition": 2
+    },
+    "attributes": null
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreihnp7wblpepq23zqyi3rvcc2abptsfjr4b4l4ih76cxwilfip25fe",
+  "name": "Rebel Title Level D",
+  "description": "Rebel Description Level D",
+  "file_url": "https://ipfs.io/ipfs/bafybeihjhoypytdrgqwlxcguza7gedzxgs6qo3w6izzbtvzjkjhpbopvbm",
+  "external_url": null,
+  "animation_url": "https://ipfs.io/ipfs/bafybeihjhoypytdrgqwlxcguza7gedzxgs6qo3w6izzbtvzjkjhpbopvbm",
+  "custom_fields": null,
+  "attributes": [
+    {
+      "trait_type": "Level",
+      "value": "D",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Role",
+      "value": "Mechanic",
+      "max_value": null,
+      "display_type": null
+    }
+  ]
+}

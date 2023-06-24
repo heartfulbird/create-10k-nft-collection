@@ -1,0 +1,24 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreifrhendmfueyomdrfg46uglwrcgvj5xqwnfqquiyggamzc2rwsxcq",
+  "name": "Rebel Title Level E",
+  "description": "Rebel Description Level E",
+  "file_url": "https://ipfs.io/ipfs/bafybeiek75vnhmljuzqr7qahdzhpnoptwcfihr35zmrg5vf6whohign5d4",
+  "external_url": null,
+  "animation_url": "https://ipfs.io/ipfs/bafybeiek75vnhmljuzqr7qahdzhpnoptwcfihr35zmrg5vf6whohign5d4",
+  "custom_fields": null,
+  "attributes": [
+    {
+      "trait_type": "Level",
+      "value": "E",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Role",
+      "value": "Doctor",
+      "max_value": null,
+      "display_type": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreifrn2dvhtdvfnkf73rl5eqkhwy5jeox56hvovmy25ydwjbtc4oaaq",
+  "name": "Rebel Title Level A",
+  "description": "Rebel Description Level A",
+  "file_url": "https://ipfs.io/ipfs/bafybeiax2nq6het3xfe2xgs3k6ngyqr6ynecotwgl4io5xzjwtcch4vfeu",
+  "external_url": null,
+  "animation_url": "https://ipfs.io/ipfs/bafybeiax2nq6het3xfe2xgs3k6ngyqr6ynecotwgl4io5xzjwtcch4vfeu",
+  "custom_fields": null,
+  "attributes": [
+    {
+      "trait_type": "Level",
+      "value": "A",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Role",
+      "value": "Leader",
+      "max_value": null,
+      "display_type": null
+    }
+  ]
+}

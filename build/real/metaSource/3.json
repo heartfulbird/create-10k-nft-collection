@@ -1,0 +1,24 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreibsek6zcsqtngvns6mga477fycahx63gfvlpereivak36udxbipc4",
+  "name": "Rebel Title Level C",
+  "description": "Rebel Description Level C",
+  "file_url": "https://ipfs.io/ipfs/bafybeibffqmwnjwx7q56jnbxnoi2xnvsiyagabjg3a5uwyf6kc6w6i6zda",
+  "external_url": null,
+  "animation_url": "https://ipfs.io/ipfs/bafybeibffqmwnjwx7q56jnbxnoi2xnvsiyagabjg3a5uwyf6kc6w6i6zda",
+  "custom_fields": null,
+  "attributes": [
+    {
+      "trait_type": "Level",
+      "value": "C",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Role",
+      "value": "Hacker",
+      "max_value": null,
+      "display_type": null
+    }
+  ]
+}

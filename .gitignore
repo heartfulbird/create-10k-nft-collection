@@ -50,8 +50,16 @@ build/Release
 # Dependency directories
 
 build/images
-build/hidden
-build/real
+
+build/hidden/images
+build/hidden/files
+build/hidden/json
+
+build/real/files
+build/real/json
+build/real/minted
+build/real/random_levels_source/
+
 build/revealed
 dist/
 node_modules/

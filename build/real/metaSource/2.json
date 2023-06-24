@@ -1,0 +1,24 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreif3luy7j252xqx2naqzlsqh54lmmoh5ja52qyk53ctvvpah5ywpvu",
+  "name": "Rebel Title Level B",
+  "description": "Rebel Description Level B",
+  "file_url": "https://ipfs.io/ipfs/bafybeigilgdman227oi3u2qmdv224p2iry5zztafxsnsxkakxg3kor42iu",
+  "external_url": null,
+  "animation_url": "https://ipfs.io/ipfs/bafybeigilgdman227oi3u2qmdv224p2iry5zztafxsnsxkakxg3kor42iu",
+  "custom_fields": null,
+  "attributes": [
+    {
+      "trait_type": "Level",
+      "value": "B",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Role",
+      "value": "Recruiter",
+      "max_value": null,
+      "display_type": null
+    }
+  ]
+}
