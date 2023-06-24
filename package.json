@@ -29,6 +29,10 @@
     "mint_real": "node utils/nftport/real/mint $npm_config_start $npm_config_end",
     "check_real_txns": "node utils/nftport/real/checkTxns $npm_config_dir $npm_config_start $npm_config_end",
 
+
+    "reveal_custom": "node utils/nftport/reveal/revealNFTs $npm_config_start $npm_config_end",
+    "check_revealed_txns": "node utils/nftport/reveal/checkTxns $npm_config_dir $npm_config_start $npm_config_end",
+
     "upload_metadata": "node utils/nftport/uploadMetas $npm_config_start $npm_config_end",
     "deploy_contract": "node utils/nftport/deployContract",
     "get_contract": "node utils/nftport/retrieveContract",

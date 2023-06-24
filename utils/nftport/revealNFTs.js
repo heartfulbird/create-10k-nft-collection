@@ -38,7 +38,7 @@ async function checkOwnedNFTs() {
 
     let ownedNFTsData = await fetchWithRetry(`${url}${page}`, options);
     for (const ownedNFT of ownedNFTsData.nfts) {
-      if (ownedNFT.contract_address === CONTRACT_ADDRESS) {
+      if (ownedNFT.contract_address.toLowerCase() === CONTRACT_ADDRESS.toLowerCase()) {
         ownedNFTs.push(parseInt(ownedNFT.token_id));
       }
     }
@@ -81,9 +81,7 @@ async function reveal() {
       }
     }
 
-    // TODO: dont loop metas just get file by
     if (!ownedNFTs.includes(edition)) {
-      // TODO: skip revealed here or later
       const revealedFilePath = `${basePath}/build/revealed/${edition}.json`;
       try {
         fs.accessSync(revealedFilePath);
@@ -187,10 +185,6 @@ if (START) {
     process.exit(1);
   }
 
-  if (CHAIN === 'goerli') {
-    console.log('Goerli is not supported for checking ownership of NFTs.');
-    process.exit(1);
-  }
   setInterval(checkOwnedNFTs, INTERVAL);
   checkOwnedNFTs();
 }

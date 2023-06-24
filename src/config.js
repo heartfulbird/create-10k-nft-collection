@@ -77,7 +77,8 @@ const GENERIC_DESCRIPTION = process.env.GENERIC_DESCRIPTION; // Replace with wha
 // ]; // Replace with your generic image(s). If multiple, separate with a comma.
 const GENERIC_IMAGE = process.env.GENERIC_IMAGE // 'define in config after uploading'; IFPS format: "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh",
 
-const REVEAL_PROMPT = process.env.REVEAL_PROMPT; // Set to false if you want to disable the prompt to confirm each reveal.
+// const REVEAL_PROMPT = process.env.REVEAL_PROMPT; // not loaded as boolean from env - so need to cast if need to se there
+const REVEAL_PROMPT = false; // Set to false if you want to disable the prompt to confirm each reveal.
 const INTERVAL = process.env.INTERVAL; // Milliseconds. This is the interval for it to check for sales and reveal the NFT. 900000 = 15 minutes.
 
 // Automatically set contract address if deployed using the deployContract.js script

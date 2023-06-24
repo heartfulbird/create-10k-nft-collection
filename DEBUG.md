@@ -1,0 +1,9 @@
+- Add breakpoint with: 
+  - debugger;
+- Find real command in: 
+  - package.json
+- Run real command with "inspect":
+  - node inspect utils/nftport/reveal/revealNFTs.js
+- It stops on the FIRST line
+  - type "c" + press enter => will stop on debugger;
+  - type "n" + press enter => will go to the next line

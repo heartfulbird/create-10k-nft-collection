@@ -52,6 +52,7 @@ build/Release
 build/images
 build/hidden
 build/real
+build/revealed
 dist/
 node_modules/
 jspm_packages/
